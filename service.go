@@ -10,7 +10,7 @@ type Service interface {
 	CreateAccount(identifier, password string, params map[string]interface{}) entity.Response
 
 	// ChangePassword is called in PUT /password
-	ChangePassword(session Session, oldPassword, newPAssword string) entity.Response
+	ChangePassword(session Session, oldPassword, newPassword string) entity.Response
 
 	// ResetPasswordRequest is called in POST /password/reset
 	ResetPasswordRequest(identifier string) entity.Response
