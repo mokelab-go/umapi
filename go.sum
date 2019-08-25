@@ -1,0 +1,6 @@
+github.com/gorilla/mux v1.7.3 h1:gnP5JzjVOuiZD07fKKToCAOjS0yOpj/qPETTXCCS6hw=
+github.com/gorilla/mux v1.7.3/go.mod h1:1lud6UwP+6orDFRuTfBEV8e9/aOM/c4fVVCaMa2zaAs=
+github.com/mokelab-go/hop v0.0.0-20161016031025-3f57d8333436 h1:TbZej6107D2Nb3IS/MbhrxdJgtLbYf/bVK256UczAa4=
+github.com/mokelab-go/hop v0.0.0-20161016031025-3f57d8333436/go.mod h1:2CDV2n5w3VHIh5/aIwg5zfo4tqGpevHr7cLg1ZsGgOs=
+github.com/mokelab-go/server v0.0.0-20190823082941-c34045379e65 h1:k9fi6OqqTMGWyj+Q/vKGLddMwgWavSBHVZ4EVIbu4AM=
+github.com/mokelab-go/server v0.0.0-20190823082941-c34045379e65/go.mod h1:tFJ6RhysYTGXhwHfXazgAr/wIrQO+8/GiXgjI9aGd7s=
