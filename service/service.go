@@ -125,7 +125,15 @@ func (s *service) ResetPassword(token, newPassword string) entity.Response {
 	if err != nil {
 		return errorResponse(http.StatusInternalServerError, "server_error", err)
 	}
-	return entity.Response{}
+
+	err = s.accountRepo.DeleteResetPasswordRequest(token)
+	if err != nil {
+		return errorResponse(http.StatusInternalServerError, "server_error", err)
+	}
+
+	return entity.Response{
+		Status: http.StatusNoContent,
+	}
 }
 
 func errorResponse(status int, code string, err error) entity.Response {

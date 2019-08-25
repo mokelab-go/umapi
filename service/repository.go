@@ -18,10 +18,13 @@ type AccountRepository interface {
 	CreateResetPasswordRequest(account Account) error
 
 	GetResetPasswordRequestWithToken(token string) (ResetPasswordRequest, error)
+
+	DeleteResetPasswordRequest(token string) error
 }
 
 // Account is app Account
 type Account interface {
+	ID() string
 	ToJSON() map[string]interface{}
 }
 
@@ -32,6 +35,8 @@ type ResetPasswordRequest interface {
 }
 
 var (
+	// ErrAlreadyExists will be returned in Create()
+	ErrAlreadyExists = errors.New("already exists")
 	// ErrNotFound will be returned in GetResetPasswordRequestWithToken()
 	ErrNotFound = errors.New("not found")
 	// ErrWrongPassword will be returned in GetWithIDAndPassword()
